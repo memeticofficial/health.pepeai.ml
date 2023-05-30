@@ -13,11 +13,6 @@
     <thead>
       <tr>
         <td>Server ID (<a class="show-full" href="#">full</a>)</td>
-        <td>Version</td>
-        <td>Throughput</td>
-        <td>Cache <a class="explain-cache" href="#">?</a></td>
-        <td>Avl. <a class="explain-avl" href="#">?</a></td>
-        <td colspan="{{ model.n_blocks + 1 }}">Served blocks</td>
       </tr>
     </thead>
     <tbody>
@@ -27,11 +22,6 @@
           <span class="short-peer-id">{{ row.short_peer_id }}</span>
           <span class="peer-id" style="display: none;">{{ row.peer_id }}</span>
         </td>
-        <td>{{ row.version }}</td>
-        <td>{{ "%.1f" | format(row.throughput) }} RPS</td>
-        <td>{% if 'cache_tokens_available' in row %}{{ row.cache_tokens_available | int }}{% endif %}</td>
-        <td>{% if 'dht_client_mode' in row %}{% if row.dht_client_mode %}Relay{% else %}Direct{% endif %}{% endif %}</td>
-        <td>{{ row.block_indices }}</td>
         {{ row.block_map|safe }}
       </tr>
       {% endfor %}
@@ -58,7 +48,7 @@
       <tr><td colspan="2">Status</td><td>Description</td></tr>
     </thead>
     <tbody>
-      <tr><td class="online">●</td><td>online</td><td>Up and running</td></tr>
+      <tr><td class="online">🐸</td><td>online</td><td>Up and running</td></tr>
       <tr><td class="joining">●</td><td>joining</td><td>Loading blocks, joining soon</td></tr>
       <tr><td class="unreachable">✖</td><td>unreachable</td><td>Unreachable from the Internet, see "Reachability issues" below</td></tr>
       <tr><td class="offline">_</td><td>offline</td><td>Disconnected a few minutes ago</td></tr>
