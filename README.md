@@ -1,6 +1,6 @@
-# Petals Health Monitor
+# PepeAI Health Monitor
 
-Source code for the Petals health monitor: http://health.petals.ml
+Source code for the PepeAI health monitor: https://github.com/memeticofficial/health.pepeai.ml
 
 ```
 Swarm state: healthy
@@ -23,15 +23,15 @@ J - joining     (loading blocks)
 _ - offline     (just disconnected)
 ```
 
-See more info about Petals in its [main GitHub repo](https://github.com/bigscience-workshop/petals).
+See more info about PepeAI in its [testnet GitHub repo](https://github.com/memeticofficial/pepeai-testnet).
 
 ## Installation
 
 You can run this app on your server using these commands:
 
 ```bash
-git clone https://github.com/borzunov/health.petals.ml.git
-cd health.petals.ml
+git clone https://github.com/memeticofficial/health.pepeai.ml.git
+cd health.pepeai.ml
 pip install -r requirements.txt
 flask run --host=0.0.0.0 --port=5000
 ```
