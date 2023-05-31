@@ -14,7 +14,7 @@ from petals.dht_utils import get_remote_module_infos
 from p2p_utils import check_reachability, check_reachability_parallel
 
 
-INITIAL_PEERS = PUBLIC_INITIAL_PEERS
+INITIAL_PEERS = ['/ip4/54.164.52.79/tcp/8989/p2p/QmR7G6GZzeQeJoXfTovp8PJdJ7qxKYFwXUa2fp9p6BYdDi']
 
 dht = hivemind.DHT(initial_peers=INITIAL_PEERS, client_mode=True, num_workers=32, start=True)
 app = Flask(__name__)
