@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1024">
-    <link rel="icon" class="js-site-favicon" type="image/png" href="https://petals.ml/logo.svg">
-    <title>Petals Health Monitor</title>
+    <link rel="icon" class="js-site-favicon" type="image/png" href="./static/images/64x-logo.png">
+    <title>PepeAI Health Monitor</title>
     <link href="static/health.css" rel="stylesheet">
   </head>
   <body>
 
 <header>
   <div class="logo">
-    <a target="_blank" href="https://petals.ml"><img src="https://petals.ml/logo.svg" height="50" class="rot-image"></a>
+    <a target="_blank" href="https://pepeco.in"><img src="./static/images/256x-logo.png" height="50"></a>
   </div>
-  <h1>Petals <span style="font-size: 13pt; color: #aaa;">Health Monitor</span></h1>
+  <h1>PepeAI <span style="font-size: 13pt; color: #aaa;">Health Monitor</span></h1>
 </header>
 
 <main>
 
 <section class="loading">
   <p>Fetching the latest data, just for you...</p>
-  <p class="loading-animation">🌸</p>
+  <p class="loading-animation">🐸</p>
 </section>
 
 <section class="error" style="display: none;">
@@ -33,7 +33,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 <script>
 function animateLoading() {
-  $('.loading-animation').text($('.loading-animation').text() + " 🌸");
+  $('.loading-animation').text($('.loading-animation').text() + " 🐸");
 }
 
 setInterval(animateLoading, 1000);

@@ -155,7 +155,7 @@ def get_state_html(state_name: str):
     elif state_name == "unreachable":
         char = "✖"
     else:
-        char = "●"
+        char = "🐸"
     return f'<span class="{state_name}">{char}</span>'
 
 
