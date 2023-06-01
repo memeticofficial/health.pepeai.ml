@@ -29,9 +29,7 @@ class ModelInfo:
 
 
 MODELS = [
-    ModelInfo("bigscience/bloom-petals", "bigscience/bloom", 70, production=True),
     ModelInfo("bigscience/bloomz-petals", "bigscience/bloomz", 70, production=True),
-    ModelInfo("bigscience/bloom-7b1-petals", "bigscience/bloom-7b1", 30, production=False),
 ]
 
 

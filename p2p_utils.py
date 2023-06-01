@@ -17,7 +17,7 @@ async def check_reachability(peer_id, _, node, *, fetch_info=False, connect_time
 
     try:
         with timeout(connect_timeout):
-            if fetch_info:  # For Petals servers
+            if fetch_info:  # For PepeAI servers
                 stub = TransformerConnectionHandler.get_stub(node.p2p, peer_id)
                 response = await stub.rpc_info(hivemind.proto.runtime_pb2.ExpertUID())
                 rpc_info = hivemind.MSGPackSerializer.loads(response.serialized_info)
@@ -28,7 +28,7 @@ async def check_reachability(peer_id, _, node, *, fetch_info=False, connect_time
                 rpc_info = {"ok": True}
     except Exception as e:
         if isinstance(e, hivemind.p2p.P2PHandlerError) and str(e) == "KeyError('')":
-            # Response of older Petals servers (version < 1.1.1)
+            # Response of older PepeAI servers (version < 1.1.1)
             rpc_info = {"ok": True}
         else:
             # Actual connection error
